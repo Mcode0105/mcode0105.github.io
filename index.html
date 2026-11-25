@@ -1,477 +1,1471 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id" class="scroll-smooth dark">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Munif Abdul, S.Kom | Solusi Web, Android, Game, Desktop &amp; Teknisi IT</title>
+  <meta name="description" content="Layanan jasa IT profesional oleh Munif Abdul, S.Kom: pembuatan website, aplikasi Android, game edukasi, software kasir desktop POS, servis elektronik, dan instalasi jaringan MikroTik dengan harga bersahabat.">
+  <meta name="keywords" content="Munif Abdul, S.Kom, Jasa Website Jember, Jasa Android Play Store, Game Edukasi, Software Kasir POS, Teknisi Elektronik Bangsalsari, MikroTik Jember">
+  <meta name="author" content="Munif Abdul, S.Kom">
 
-  <title>My Portfolio - Abdul Munif</title>
-  <meta content="Website Resmi Portfolio Abdul Munif, S.Kom" name="description">
-  <meta content="Abdul Munif, portofolio abudl munif, abdulmunif, universitas nurul jadid, teknik informatika" name="keywords">
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Munif Abdul, S.Kom | Portofolio &amp; Solusi IT Terpadu">
+  <meta property="og:description" content="Solusi Digital Cepat, Berkualitas &amp; Bersahabat untuk Instansi, UMKM, Mahasiswa &amp; Masyarakat Umum.">
+  <meta property="og:type" content="website">
 
-  <!-- Favicons -->
-  <link href="assets/img/abdu-munif.jpg" rel="icon">
-  <link href="assets/img/abdu-munif.jpg" rel="apple-touch-icon">
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+            }
+          },
+          animation: {
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+          },
+          keyframes: {
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.45' },
+              '50%': { opacity: '0.8' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Modern Tech Mesh & Radial Fade (Light & Dark) */
+    .tech-mesh {
+      background-image:
+        linear-gradient(to right, rgba(8, 145, 178, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(8, 145, 178, 0.08) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 50%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 50%, transparent 100%);
+    }
+    .dark .tech-mesh {
+      background-image:
+        linear-gradient(to right, rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    /* Glass Card Surface (Light & Dark) + Interactive Spotlight */
+    .glass-card {
+      position: relative;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.72));
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px -12px rgba(15, 23, 42, 0.08);
+    }
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(360px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(6, 182, 212, 0.12), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+    .glass-card:hover::before {
+      opacity: 1;
+    }
+    .dark .glass-card {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.45));
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.45);
+    }
+    .dark .glass-card::before {
+      background: radial-gradient(380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(34, 211, 238, 0.14), transparent 60%);
+    }
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.1.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    /* Parallax & 3D Tilt GPU Hints */
+    [data-parallax] {
+      will-change: transform;
+    }
+    #hero-tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+      will-change: transform;
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px) scale(0.98);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .animate-float-slow, .animate-pulse-glow { animation: none !important; }
+    }
+
+    /* Gradient Text (Light & Dark) */
+    .text-tech-gradient {
+      background: linear-gradient(120deg, #0891b2 0%, #2563eb 50%, #059669 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .dark .text-tech-gradient {
+      background: linear-gradient(120deg, #22d3ee 0%, #60a5fa 45%, #34d399 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Infinite Tech Stack Marquee */
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 28s linear infinite;
+    }
+    .marquee-wrap:hover .marquee-track {
+      animation-play-state: paused;
+    }
+    .marquee-mask {
+      mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; }
+    }
+  </style>
 </head>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#030712] dark:text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white overflow-x-hidden transition-colors duration-300">
 
-<body>
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" class="fixed top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 z-[60] transition-[width] duration-75 ease-out pointer-events-none"></div>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- Ambient Modern Tech Background Orbs with Parallax -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <div data-parallax="0.14" class="absolute -top-40 -left-32 w-[520px] h-[520px] rounded-full bg-cyan-400/20 dark:bg-cyan-500/15 blur-[130px] animate-pulse-glow"></div>
+    <div data-parallax="-0.1" class="absolute top-1/3 -right-40 w-[460px] h-[460px] rounded-full bg-blue-400/15 dark:bg-indigo-600/15 blur-[140px]"></div>
+    <div data-parallax="0.08" class="absolute -bottom-40 left-1/3 w-[480px] h-[480px] rounded-full bg-emerald-400/15 dark:bg-emerald-500/10 blur-[140px]"></div>
+  </div>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/abdul-munif.jpg" alt="" class="img-fluid rounded-circle">
-      
-        <h1 class="text-light"><a href="index.html">ABDUL MUNIF, S.Kom</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://twitter.com/abdulmu42616245" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/munif.abdul.3785/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/munif_abdillah_01/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://github.com/Mcode0105" target="_blank" class="google-plus"><i class="bx bxl-github"></i></a>
-          <a href="https://api.whatsapp.com/send?phone=6285335650431" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+  <!-- 1. HEADER & STICKY NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/80 dark:bg-[#030712]/75 border-b border-slate-200/80 dark:border-white/[0.07] transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-cyan-500 via-sky-500 to-emerald-400 p-[1.5px] shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full rounded-[14px] bg-white dark:bg-slate-950 flex items-center justify-center font-display font-extrabold text-sm text-transparent bg-clip-text bg-gradient-to-tr from-cyan-600 to-emerald-600 dark:from-cyan-300 dark:to-emerald-300">
+            MA
+          </div>
         </div>
+        <div>
+          <span class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-none block">Munif Abdul, <span class="text-cyan-600 dark:text-cyan-400">S.Kom</span></span>
+          <span class="block text-[10px] text-slate-500 dark:text-slate-400 tracking-wider uppercase font-semibold mt-0.5">IT Specialist &amp; Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav id="desktop-nav" aria-label="Navigasi Utama" class="hidden md:flex items-center gap-1.5 bg-slate-100/80 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07] rounded-full px-2 py-1 text-xs font-medium text-slate-600 dark:text-slate-300">
+        <a href="#layanan" data-nav="layanan" class="nav-pill px-3.5 py-1.5 rounded-full hover:bg-white dark:hover:bg-white/[0.06] hover:text-cyan-600 dark:hover:text-cyan-300 transition-all">Layanan</a>
+        <a href="#harga" data-nav="harga" class="nav-pill px-3.5 py-1.5 rounded-full hover:bg-white dark:hover:bg-white/[0.06] hover:text-cyan-600 dark:hover:text-cyan-300 transition-all">Paket Harga</a>
+        <a href="#portofolio" data-nav="portofolio" class="nav-pill px-3.5 py-1.5 rounded-full hover:bg-white dark:hover:bg-white/[0.06] hover:text-cyan-600 dark:hover:text-cyan-300 transition-all">Portofolio</a>
+        <a href="#tentang" data-nav="tentang" class="nav-pill px-3.5 py-1.5 rounded-full hover:bg-white dark:hover:bg-white/[0.06] hover:text-cyan-600 dark:hover:text-cyan-300 transition-all">Tentang</a>
+        <a href="#cv" data-nav="cv" class="nav-pill px-3.5 py-1.5 rounded-full hover:bg-white dark:hover:bg-white/[0.06] hover:text-cyan-600 dark:hover:text-cyan-300 transition-all">CV</a>
+        <a href="#kontak" data-nav="kontak" class="nav-pill px-3.5 py-1.5 rounded-full hover:bg-white dark:hover:bg-white/[0.06] hover:text-cyan-600 dark:hover:text-cyan-300 transition-all">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <!-- Dark / Light Mode Toggle -->
+        <button id="theme-toggle"
+                type="button"
+                aria-label="Ganti tema Dark atau Light Mode"
+                title="Ganti Tema (Dark / Light)"
+                class="p-2 rounded-full bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-amber-300 hover:border-cyan-500/40 transition-all hover:scale-105">
+          <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-slate-700"></i>
+        </button>
+
+        <a href="https://wa.me/6285335650431?text=Halo%20Munif%20Abdul,%20S.Kom,%20saya%20tertarik%20konsultasi%20layanan%20digital."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 text-xs sm:text-sm font-bold shadow-lg shadow-cyan-500/25 transition-all hover:scale-105">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Konsultasi WA</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn"
+                type="button"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false"
+                class="md:hidden p-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 transition-colors">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
       </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Me</span></a></li>
-          <!-- <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li> -->
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
     </div>
-  </header><!-- End Header -->
- 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="row">
-      <div class="col mt-1 hero-container">
-     <h2 class="text-light" id="date"></h2>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-white/[0.07] bg-white/95 dark:bg-[#030712]/95 backdrop-blur-xl px-4 py-4 space-y-1.5">
+      <a href="#layanan" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.05] hover:text-cyan-600 dark:hover:text-cyan-300">Layanan</a>
+      <a href="#harga" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.05] hover:text-cyan-600 dark:hover:text-cyan-300">Paket Harga</a>
+      <a href="#portofolio" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.05] hover:text-cyan-600 dark:hover:text-cyan-300">Portofolio</a>
+      <a href="#tentang" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.05] hover:text-cyan-600 dark:hover:text-cyan-300">Tentang</a>
+      <a href="#cv" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.05] hover:text-cyan-600 dark:hover:text-cyan-300">CV</a>
+      <a href="#kontak" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/[0.05] hover:text-cyan-600 dark:hover:text-cyan-300">Kontak</a>
     </div>
-    </div>
-    <div class="hero-container" data-aos="fade-in">
-      <h1>ABDUL MUNIF, S.Kom</h1>
-    
-      <p>I'm <span class="typed" data-typed-items="Backend  Web Developer ,Student in UNIVERSITY NURUL JADID,  "></span></p>
-    </div>
-  </section><!-- End Hero -->
+  </header>
 
-  <main id="main">
+  <!-- 2. HERO SECTION -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div data-parallax="0.18" class="absolute inset-0 tech-mesh pointer-events-none"></div>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
 
-        <div class="section-title">
-          <h2>About</h2>
-          <!-- <p>dem hic quas.</p> -->
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/abdu-munif.jpg" class="img-fluid" alt="">
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-600/20 dark:border-cyan-400/25 text-xs text-cyan-700 dark:text-cyan-300 font-medium backdrop-blur-md">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 dark:bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 dark:bg-emerald-400"></span>
+            </span>
+            <span>Tersedia untuk Proyek Baru &bull; <span id="typing-role" class="text-slate-900 dark:text-white font-semibold">Web &amp; Android Dev</span></span>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX Designer &amp; Backend Web Developer.</h3>
-            <h3 class="fst-italic text-center">
-             My Profile
-            </h3>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Tanggal Lahir:</strong> <span>1 Mei 1998</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>mcode0105.github.io</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Alamat:</strong> <span>Bangsalsari, Jember</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>munifabdul606@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>No Hp:</strong> <span>+6285335650431</span></li>
-                </ul>
-              </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.14]">
+            Solusi Digital Cepat, <br class="hidden sm:inline">
+            <span class="text-tech-gradient">
+              Berkualitas &amp; Bersahabat
+            </span>
+            <span class="block text-2xl sm:text-3xl lg:text-[2.2rem] font-bold text-slate-700 dark:text-slate-200 mt-2">untuk Kalangan Umum.</span>
+          </h1>
+
+          <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Partner teknologi terpadu untuk pembuatan <strong class="text-slate-900 dark:text-slate-200">Website</strong>, <strong class="text-slate-900 dark:text-slate-200">Aplikasi Android</strong>, <strong class="text-slate-900 dark:text-slate-200">Game Edukasi</strong>, dan <strong class="text-slate-900 dark:text-slate-200">Software Kasir Desktop (POS)</strong>, hingga layanan <strong class="text-slate-900 dark:text-slate-200">Teknisi Elektronik</strong> &amp; jaringan <strong class="text-slate-900 dark:text-slate-200">MikroTik / Wi-Fi</strong>.
+          </p>
+
+          <div class="flex flex-wrap gap-3.5 justify-center lg:justify-start pt-2">
+            <a href="#harga" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 dark:from-cyan-500 dark:to-blue-600 hover:from-cyan-500 hover:to-blue-500 font-semibold text-white shadow-xl shadow-cyan-500/25 transition-all hover:-translate-y-0.5">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              Lihat Daftar Harga
+            </a>
+            <a href="#portofolio" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white dark:bg-white/[0.04] hover:bg-slate-100 dark:hover:bg-white/[0.08] border border-slate-200 dark:border-white/10 font-semibold text-slate-700 dark:text-slate-200 shadow-sm dark:shadow-none backdrop-blur-md transition-all hover:-translate-y-0.5">
+              <i data-lucide="layout-grid" class="w-4 h-4 text-cyan-600 dark:text-cyan-400"></i>
+              Cek Portofolio Langsung
+            </a>
+          </div>
+
+          <!-- 3. METRIK KREDIBILITAS -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200 dark:border-white/[0.08] max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="p-3 rounded-2xl bg-white/80 dark:bg-white/[0.02] border border-slate-200/80 dark:border-white/[0.05]">
+              <p class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">6 Sektor</p>
+              <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">Software &amp; Hardware</p>
             </div>
-            <h3 class="fst-italic text-center">
-              education
-             </h3>
-            <p><i class="bi bi-chevron-right"></i> <strong> SD :</strong> SDN TISNOGAMBAR 01 </p>
-            <p><i class="bi bi-chevron-right"></i> <strong> MTS :</strong> MTS Bustanul Ulum Bulugading </p>
-            <p><i class="bi bi-chevron-right"></i> <strong> SMK :</strong> SMK Bustanul Ulum Bulugading (Teknik Komputer & Jaringan) </p>
-            <p><i class="bi bi-chevron-right"></i> <strong> S1 :</strong> UNIVERSITAS NURUL JADID (Teknik Informatika)</p>
-            <h3 class="fst-italic text-center">
-              training course
-             </h3>
-            <p><i class="bi bi-chevron-right"></i> <strong> Lembaga Sertifikasi Profesi Pemrograman </strong> </p>
-            <p><i class="bi bi-chevron-right"></i> <strong>Pelatihan Mikrotik </strong></p>
-            <p><i class="bi bi-chevron-right"></i> <a href="https://www.dicoding.com/certificates/JMZVM0KMJZN9"> <strong>Pemrograman Dengan Python Dicoding</strong></a>  </p>
-            <p><i class="bi bi-chevron-right"></i> <a href="https://www.dicoding.com/certificates/N9ZODL0RRPG5"> <strong>Dasar Visualisasi Data Dicoding</strong></a>  </p>
+            <div class="p-3 rounded-2xl bg-white/80 dark:bg-white/[0.02] border border-slate-200/80 dark:border-white/[0.05]">
+              <p class="font-display text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400">7+ Karya</p>
+              <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">Live Web &amp; Play Store</p>
+            </div>
+            <div class="p-3 rounded-2xl bg-white/80 dark:bg-white/[0.02] border border-slate-200/80 dark:border-white/[0.05]">
+              <p class="font-display text-xl sm:text-2xl font-bold text-cyan-600 dark:text-cyan-400">Fleksibel</p>
+              <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400">Sesuai Anggaran</p>
+            </div>
           </div>
         </div>
 
-      </div>
-    </section><!-- End About Section -->
+        <!-- KARTU PROFIL RESMI MODERN -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div data-parallax="-0.06" class="relative w-full max-w-sm animate-float-slow">
+            <div class="absolute -inset-1 rounded-[2rem] bg-gradient-to-tr from-cyan-500 via-blue-500 to-emerald-400 opacity-20 dark:opacity-30 blur-xl"></div>
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2> My Skills</h2>
-        
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="hero-tilt-card" class="relative glass-card border border-slate-200/80 dark:border-white/10 rounded-[2rem] p-6 text-center shadow-2xl">
+              <!-- Top tech bar -->
+              <div class="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 mb-4 px-1">
+                <span class="inline-flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400"></span> Online Ready
+                </span>
+                <span class="font-mono text-[10px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 text-cyan-700 dark:text-cyan-300">S.Kom Certified</span>
               </div>
-            </div>
 
-            <div class="progress">
-              <span class="skill">CSS <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              <!-- Foto Resmi -->
+              <div class="relative w-40 h-44 mx-auto mb-4 rounded-3xl p-[2px] bg-gradient-to-tr from-cyan-500 via-sky-500 to-emerald-400 shadow-lg shadow-cyan-500/20">
+                <div class="w-full h-full rounded-[22px] overflow-hidden bg-slate-200 dark:bg-slate-900">
+                  <img src="foto-profil.jpg"
+                       alt="Foto Resmi Munif Abdul, S.Kom"
+                       class="w-full h-full object-cover object-top">
+                </div>
               </div>
-            </div>
 
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              <h2 class="font-display text-xl font-bold text-slate-900 dark:text-white">Munif Abdul, S.Kom</h2>
+              <p class="text-xs font-semibold text-cyan-600 dark:text-cyan-400 mb-3 tracking-wide uppercase">IT Specialist &amp; Electronic Technician</p>
+              <p class="text-xs text-slate-600 dark:text-slate-300/90 leading-relaxed mb-4 italic">
+                "Menghadirkan solusi melalui teknologi, kreativitas, dan inovasi yang ramah di kantong masyarakat."
+              </p>
+
+              <!-- Pill Tag Keahlian -->
+              <div class="flex flex-wrap justify-center gap-1.5 mb-4">
+                <span class="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-700 dark:text-cyan-200">Web Dev</span>
+                <span class="px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[11px] text-blue-700 dark:text-blue-200">Android</span>
+                <span class="px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[11px] text-indigo-700 dark:text-indigo-200">Game Edukasi</span>
+                <span class="px-2.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-[11px] text-sky-700 dark:text-sky-200">Desktop POS</span>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-700 dark:text-emerald-200">Teknisi Ponsel</span>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] text-emerald-700 dark:text-emerald-200">Laptop &amp; PC</span>
+                <span class="px-2.5 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-[11px] text-teal-700 dark:text-teal-200">Elektronik</span>
+                <span class="px-2.5 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-[11px] text-teal-700 dark:text-teal-200">Teknisi Jaringan</span>
               </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+
+              <div class="flex items-center justify-center gap-2 text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-white/[0.04] py-2.5 px-3 rounded-2xl border border-slate-200/80 dark:border-white/[0.08]">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-600 dark:text-cyan-400 shrink-0"></i>
+                <span>Bangsalsari, Jember &bull; Online Seluruh Indonesia</span>
               </div>
-            </div>
-
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Codeigniter <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Laravel <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Jquery <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Struktur Data & Algoritma <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <!-- <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
-            <div class="resume-item pb-0">
-              <h4>Alex Smith</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
             </div>
           </div>
         </div>
 
       </div>
-    </section> -->
-    <!-- End Resume Section -->
+    </div>
+  </section>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
+  <!-- TECH ECOSYSTEM MARQUEE STRIP -->
+  <div class="border-y border-slate-200/80 dark:border-white/[0.06] bg-white/60 dark:bg-white/[0.02] py-4 overflow-hidden marquee-wrap">
+    <div class="marquee-mask overflow-hidden">
+      <div class="marquee-track gap-4 text-xs font-semibold text-slate-600 dark:text-slate-300">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-500"></i> Web &amp; E-Learning</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="smartphone" class="w-3.5 h-3.5 text-emerald-500"></i> Android &amp; Play Store</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="gamepad-2" class="w-3.5 h-3.5 text-indigo-500"></i> Game Edukasi 2D</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="monitor" class="w-3.5 h-3.5 text-sky-500"></i> Desktop POS Kasir</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="router" class="w-3.5 h-3.5 text-cyan-500"></i> MikroTik &amp; LAN/Wi-Fi</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="wrench" class="w-3.5 h-3.5 text-emerald-500"></i> Servis Ponsel &amp; Laptop</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="cpu" class="w-3.5 h-3.5 text-amber-500"></i> Elektronika &amp; Hardware</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="code-2" class="w-3.5 h-3.5 text-blue-500"></i> Python &amp; Sistem Informasi</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-500"></i> Web &amp; E-Learning</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="smartphone" class="w-3.5 h-3.5 text-emerald-500"></i> Android &amp; Play Store</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="gamepad-2" class="w-3.5 h-3.5 text-indigo-500"></i> Game Edukasi 2D</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="monitor" class="w-3.5 h-3.5 text-sky-500"></i> Desktop POS Kasir</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="router" class="w-3.5 h-3.5 text-cyan-500"></i> MikroTik &amp; LAN/Wi-Fi</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="wrench" class="w-3.5 h-3.5 text-emerald-500"></i> Servis Ponsel &amp; Laptop</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="cpu" class="w-3.5 h-3.5 text-amber-500"></i> Elektronika &amp; Hardware</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-white/[0.04] border border-slate-200/80 dark:border-white/[0.08]"><i data-lucide="code-2" class="w-3.5 h-3.5 text-blue-500"></i> Python &amp; Sistem Informasi</span>
+      </div>
+    </div>
+  </div>
 
-        <div class="section-title">
-          <h2>My Apps</h2>
-          <p class="text-center">Beberap aplikasi yang sudah saya buat di bidang web programing</p>
+  <!-- 4. KATALOG LAYANAN UTAMA (4 PILAR DIGITAL + 2 LAYANAN TEKNIS) -->
+  <section id="layanan" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-3">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i> Bidang Keahlian
+        </span>
+        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">4 Pilar Software &amp; 2 Layanan Teknis</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">Solusi menyeluruh dari pengembangan perangkat lunak modern hingga perbaikan perangkat keras &amp; jaringan.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 1. Web Developer -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-6 rounded-3xl hover:border-cyan-500/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500/15 to-blue-500/10 border border-cyan-500/25 flex items-center justify-center text-cyan-600 dark:text-cyan-300 mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white mb-2">Web Developer</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Website profil resmi sekolah/perusahaan, landing page promosi UMKM, sistem absensi berbasis web, hingga portal e-learning/CBT terpadu.
+            </p>
+          </div>
+          <a href="#kontak" data-service="Web Developer" class="service-cta mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300">
+            Konsultasi Web <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
         </div>
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-web">Web Application</li>
+        <!-- 2. Android Developer -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-6 rounded-3xl hover:border-cyan-500/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500/15 to-blue-500/10 border border-cyan-500/25 flex items-center justify-center text-cyan-600 dark:text-cyan-300 mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="smartphone" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white mb-2">Android Developer</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Konversi web ke APK (WebView), aplikasi custom absensi/pegawai dengan GPS &amp; kamera, integrasi REST API, dan publikasi ke Google Play Store.
+            </p>
+          </div>
+          <a href="#kontak" data-service="Android Developer" class="service-cta mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300">
+            Konsultasi Android <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
 
+        <!-- 3. Game Developer -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-6 rounded-3xl hover:border-indigo-500/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500/15 to-cyan-500/10 border border-indigo-500/25 flex items-center justify-center text-indigo-600 dark:text-indigo-300 mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="gamepad-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white mb-2">Game Developer</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Pembuatan game edukasi anak/sekolah, kuis interaktif, game casual platformer 2D, media ajar multimedia, serta pendampingan tugas akhir.
+            </p>
+          </div>
+          <a href="#kontak" data-service="Game Edukasi / Developer" class="service-cta mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300">
+            Konsultasi Game <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- 4. Desktop Developer -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-6 rounded-3xl hover:border-sky-500/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500/15 to-blue-500/10 border border-sky-500/25 flex items-center justify-center text-sky-600 dark:text-sky-300 mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="monitor" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white mb-2">Desktop Developer</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Software Point of Sale (POS) kasir toko/UMKM, manajemen stok barang, cetak struk thermal, serta aplikasi database administrasi kantor offline/online.
+            </p>
+          </div>
+          <a href="#kontak" data-service="Desktop POS Developer" class="service-cta mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 dark:group-hover:text-cyan-300">
+            Konsultasi Desktop <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- 5. Teknisi Ponsel, Laptop & Elektronik -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-6 rounded-3xl hover:border-emerald-500/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/15 to-teal-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-300 mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="wrench" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white mb-2">Teknisi Ponsel, Laptop &amp; Elektronik</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Servis HP/smartphone (ganti LCD, baterai, software/flashing), perbaikan laptop &amp; PC (upgrade SSD/RAM, install ulang, hardware), serta perbaikan perangkat elektronik lainnya (Area Jember &amp; sekitarnya).
+            </p>
+          </div>
+          <a href="#kontak" data-service="Teknisi Ponsel / Laptop / Elektronik" class="service-cta mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 dark:group-hover:text-emerald-300">
+            Booking Servis <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- 6. Teknisi Jaringan (Network Technician) -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-6 rounded-3xl hover:border-emerald-500/50 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/15 to-cyan-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-300 mb-5 group-hover:scale-110 transition-transform">
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white mb-2">Teknisi Jaringan (Network)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Instalasi kabel LAN sekolah/kantor/rumah, setup Wi-Fi &amp; hotspot voucher, manajemen bandwidth, setting Access Point, serta konfigurasi router MikroTik agar koneksi stabil.
+            </p>
+          </div>
+          <a href="#kontak" data-service="Teknisi Jaringan (LAN / Wi-Fi / MikroTik)" class="service-cta mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 dark:group-hover:text-emerald-300">
+            Konsultasi Jaringan <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PAKET HARGA TRANSPARAN + NOTICE BIAYA TAMBAHAN -->
+  <section id="harga" class="py-20 relative border-y border-slate-200/80 dark:border-white/[0.05] bg-slate-100/60 dark:bg-white/[0.015]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-3">
+          <i data-lucide="tag" class="w-3.5 h-3.5"></i> Tarif Bersahabat
+        </span>
+        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Daftar Paket Harga Pembuatan Software</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">Estimasi biaya transparan dan dapat dinegosiasikan sesuai skala proyek dan anggaran Anda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Web Dev -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-3xl p-6 flex flex-col justify-between hover:border-cyan-500/40 hover:-translate-y-1 transition-all">
+          <div>
+            <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">Web Developer</span>
+            <p class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1.5">Rp 500 Rb &ndash; 3,5 Jt</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 mb-5">Mulai landing page UMKM hingga sistem informasi sekolah.</p>
+            <ul class="text-xs space-y-2.5 text-slate-700 dark:text-slate-300">
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Landing Page (Mulai 500 Rb)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Profil Sekolah / Instansi (Mulai 1 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Sistem Absensi Web (Mulai 2 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Platform E-Learning / CBT (Mulai 3,5 Jt)</li>
             </ul>
           </div>
+          <a href="https://wa.me/6285335650431?text=Halo%20Pak%20Munif,%20saya%20mau%20konsultasi%20paket%20Web%20Developer."
+             target="_blank" rel="noopener noreferrer"
+             class="mt-6 w-full py-2.5 rounded-2xl bg-slate-900 dark:bg-white/[0.06] hover:bg-cyan-600 dark:hover:bg-cyan-500 hover:text-white dark:hover:text-slate-950 border border-slate-800 dark:border-white/10 text-center text-xs font-semibold text-white transition-all block">
+            Pesan Paket Web
+          </a>
         </div>
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/siakad.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/siakad.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="http://siakad.smkbu.epizy.com" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+        <!-- Android Dev -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-3xl p-6 flex flex-col justify-between hover:border-cyan-500/40 hover:-translate-y-1 transition-all">
+          <div>
+            <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">Android Developer</span>
+            <p class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1.5">Rp 1 Jt &ndash; 7,5 Jt</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 mb-5">Aplikasi WebView, presensi mobile hingga sistem custom.</p>
+            <ul class="text-xs space-y-2.5 text-slate-700 dark:text-slate-300">
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Konversi WebView APK (Mulai 1 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Absensi Mobile GPS/Kamera (Mulai 3 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Custom E-Commerce / Bisnis (5 &ndash; 7,5 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Panduan Rilis Play Store</li>
+            </ul>
           </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/prakerin.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/prakerin.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="http://prakerin.smkbu.epizy.com" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/absensi.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/absensi.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="http://app.smkbu.epizy.com" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ppdb.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/ppdb.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="http://ppdb.smkbu.epizy.com" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/absensismk.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/absensismk.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="http://absensi.smkfulldaybu.com" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
+          <a href="https://wa.me/6285335650431?text=Halo%20Pak%20Munif,%20saya%20mau%20konsultasi%20paket%20Android%20Developer."
+             target="_blank" rel="noopener noreferrer"
+             class="mt-6 w-full py-2.5 rounded-2xl bg-slate-900 dark:bg-white/[0.06] hover:bg-cyan-600 dark:hover:bg-cyan-500 hover:text-white dark:hover:text-slate-950 border border-slate-800 dark:border-white/10 text-center text-xs font-semibold text-white transition-all block">
+            Pesan Paket Android
+          </a>
         </div>
 
+        <!-- Game Dev (Highlighted) -->
+        <div class="reveal relative rounded-3xl p-[1.5px] bg-gradient-to-b from-cyan-500 via-blue-500 to-emerald-400 shadow-2xl shadow-cyan-500/15 hover:-translate-y-1 transition-all">
+          <div class="bg-white dark:bg-[#091122] rounded-[22.5px] p-6 h-full flex flex-col justify-between relative">
+            <div class="absolute -top-3 right-5 bg-gradient-to-r from-cyan-500 to-emerald-400 text-slate-950 text-[10px] font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wide shadow-md">Paling Dicari</div>
+            <div>
+              <span class="text-xs font-bold text-cyan-600 dark:text-cyan-300 uppercase tracking-wider">Game Edukasi</span>
+              <p class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1.5">Rp 750 Rb &ndash; 5 Jt</p>
+              <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 mb-5">Spesialis game edukasi interaktif sekolah, kuis &amp; tugas akhir.</p>
+              <ul class="text-xs space-y-2.5 text-slate-700 dark:text-slate-200">
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Game Kuis / Media Belajar (Mulai 750 Rb)</li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Game Casual / Platformer 2D (Mulai 1,5 Jt)</li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Game Edukasi Multi-level (3 &ndash; 5 Jt)</li>
+                <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Output APK Android / Web / PC</li>
+              </ul>
+            </div>
+            <a href="https://wa.me/6285335650431?text=Halo%20Pak%20Munif,%20saya%20mau%20konsultasi%20paket%20Game%20Edukasi."
+               target="_blank" rel="noopener noreferrer"
+               class="mt-6 w-full py-2.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 text-center text-xs font-bold transition-all block shadow-lg shadow-cyan-500/20">
+              Pesan Paket Game
+            </a>
+          </div>
+        </div>
+
+        <!-- Desktop Dev -->
+        <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-3xl p-6 flex flex-col justify-between hover:border-cyan-500/40 hover:-translate-y-1 transition-all">
+          <div>
+            <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">Desktop POS</span>
+            <p class="font-display text-xl font-bold text-slate-900 dark:text-white mt-1.5">Rp 800 Rb &ndash; 4 Jt</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-2 mb-5">Solusi aplikasi kasir toko &amp; database administrasi.</p>
+            <ul class="text-xs space-y-2.5 text-slate-700 dark:text-slate-300">
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Aplikasi Kasir Toko POS (Mulai 800 Rb)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Administrasi &amp; Stok Kantor (Mulai 1,5 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Integrasi Barcode &amp; Thermal (2,5 &ndash; 4 Jt)</li>
+              <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0 mt-0.5"></i> Instalasi Langsung ke PC</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/6285335650431?text=Halo%20Pak%20Munif,%20saya%20mau%20konsultasi%20paket%20Aplikasi%20Desktop%20POS."
+             target="_blank" rel="noopener noreferrer"
+             class="mt-6 w-full py-2.5 rounded-2xl bg-slate-900 dark:bg-white/[0.06] hover:bg-cyan-600 dark:hover:bg-cyan-500 hover:text-white dark:hover:text-slate-950 border border-slate-800 dark:border-white/10 text-center text-xs font-semibold text-white transition-all block">
+            Pesan Paket Desktop
+          </a>
+        </div>
       </div>
-    </section><!-- End Portfolio Section -->
 
-    <!-- ======= Services Section ======= -->
-
-
-    <!-- ======= Testimonials Section ======= -->
-  
-    <!-- End Testimonials Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>dusun jatisari desa tisnogambar, bangsaLsari JEMBER</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>munifabdul603@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+62 85335650431</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.07778632034075!2d113.563228358852!3d-8.191270725379002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd68e03d541592d%3A0x5634ef5e28060bef!2sJatisari%2C%20Tisnogambar%2C%20Kec.%20Bangsalsari%2C%20Kabupaten%20Jember%2C%20Jawa%20Timur!5e1!3m2!1sid!2sid!4v1618078849012!5m2!1sid!2sid" allowfullscreen="" loading="lazy" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+      <!-- Layanan Teknis Hardware & Jaringan -->
+      <div class="reveal mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-3.5">
+            <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-300 shrink-0">
+              <i data-lucide="smartphone-charging" class="w-5 h-5"></i>
             </div>
-
+            <div>
+              <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Servis Ponsel, Laptop, PC &amp; Elektronik</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Perbaikan HP, ganti LCD/baterai, flashing, install ulang, upgrade SSD/RAM, hingga elektronik umum (Jember &amp; sekitarnya).</p>
+            </div>
           </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Nama</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name"> Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Pesan</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
+          <a href="https://wa.me/6285335650431?text=Halo%20Pak%20Munif,%20saya%20mau%20konsultasi%20servis%20ponsel%20%2F%20laptop%20%2F%20elektronik."
+             target="_blank" rel="noopener noreferrer"
+             class="shrink-0 px-4 py-2.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold transition-all">
+            Tanya Servis
+          </a>
         </div>
 
+        <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-3.5">
+            <div class="w-11 h-11 rounded-2xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center text-cyan-600 dark:text-cyan-300 shrink-0">
+              <i data-lucide="wifi" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-sm font-bold text-slate-900 dark:text-white">Instalasi Jaringan LAN, Wi-Fi &amp; MikroTik</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Pemasangan jaringan sekolah/kantor/rumah, setting hotspot voucher, manajemen bandwidth, &amp; troubleshooting jaringan.</p>
+            </div>
+          </div>
+          <a href="https://wa.me/6285335650431?text=Halo%20Pak%20Munif,%20saya%20mau%20konsultasi%20instalasi%20jaringan%20LAN%20%2F%20Wi-Fi%20%2F%20MikroTik."
+             target="_blank" rel="noopener noreferrer"
+             class="shrink-0 px-4 py-2.5 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold transition-all">
+            Tanya Jaringan
+          </a>
+        </div>
       </div>
-    </section><!-- End Contact Section -->
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>by Abdul Munif 2021 </span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">Abdul Munif</a>
+      <!-- KOTAK CATATAN / DISCLAIMER WAJIB -->
+      <div class="reveal mt-6 p-5 rounded-3xl bg-amber-500/10 border border-amber-500/30 dark:border-amber-400/25 text-slate-800 dark:text-slate-200 backdrop-blur-md">
+        <div class="flex items-start gap-3">
+          <i data-lucide="alert-circle" class="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5"></i>
+          <p class="text-xs sm:text-sm leading-relaxed">
+            <span class="font-bold text-amber-700 dark:text-amber-300">Catatan Penting:</span> Harga yang tertera di atas <strong>belum termasuk</strong> biaya sewa Hosting, pendaftaran Domain (.com / .id), akun developer Google Play Console ($25), maupun layanan server pihak ketiga. Seluruh harga bersifat fleksibel dan <strong>dapat dinegosiasikan</strong> secara musyawarah menyesuaikan kebutuhan dan ketersediaan anggaran klien.
+          </p>
+        </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- 6. GALERI PORTOFOLIO NYATA -->
+  <section id="portofolio" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10 reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-3">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Bukti Hasil Kerja
+        </span>
+        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Portofolio Web &amp; Android Live</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-3">Seluruh proyek berikut aktif dan dapat langsung Anda akses secara online.</p>
+      </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <!-- Interactive Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mb-12 reveal" role="tablist" aria-label="Filter Portofolio">
+        <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 shadow-md shadow-cyan-500/20 transition-all">
+          Semua Karya (7)
+        </button>
+        <button type="button" data-filter="web" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:border-cyan-500/40 transition-all">
+          Website Aktif (5)
+        </button>
+        <button type="button" data-filter="android" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:border-emerald-500/40 transition-all">
+          Google Play Store (2)
+        </button>
+      </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/mysript.js"></script>
+      <!-- Web Projects -->
+      <div class="portfolio-group" data-category="web">
+        <h3 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-5 flex items-center gap-2">
+          <i data-lucide="globe" class="w-4 h-4 text-cyan-600 dark:text-cyan-400"></i> Proyek Website Aktif
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          <a href="https://bulugading.com" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">Bulugading.com</h4>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">Portal media informasi dan publikasi lembaga terpadu.</p>
+            <span class="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">Portal Web</span>
+          </a>
 
+          <a href="https://smkfulldaybu.com" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">Smkfulldaybu.com</h4>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">Website profil resmi institusi SMK Bustanul Ulum Bulugading.</p>
+            <span class="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">Profil Sekolah</span>
+          </a>
+
+          <a href="https://absensi.smkfulldaybu.com" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">Absensi.smkfulldaybu.com</h4>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">Sistem informasi presensi digital guru dan siswa berbasis web.</p>
+            <span class="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">Sistem Presensi</span>
+          </a>
+
+          <a href="https://elearning.smkfulldaybu.com" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">Elearning.smkfulldaybu.com</h4>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">Platform Learning Management System (LMS) pembelajaran interaktif.</p>
+            <span class="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">E-Learning LMS</span>
+          </a>
+
+          <a href="https://sik.smkfulldaybu.com" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">Sik.smkfulldaybu.com</h4>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">Sistem Informasi Kelembagaan untuk pengelolaan data akademik &amp; tata usaha.</p>
+            <span class="inline-block text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border border-cyan-500/20">Sistem Informasi</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Android Projects -->
+      <div class="portfolio-group" data-category="android">
+        <h3 class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-5 flex items-center gap-2">
+          <i data-lucide="play" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i> Aplikasi Rilis Google Play Store
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <a href="https://play.google.com/store/apps/details?id=com.bulugading.smart" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-emerald-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">Bulugading Smart</h4>
+              <span class="text-[10px] bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/25 px-2.5 py-0.5 rounded-full font-semibold">Play Store</span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-2">Aplikasi mobile layanan digital cerdas SMK Bustanul Ulum Bulugading.</p>
+            <code class="text-[11px] text-slate-500">com.bulugading.smart</code>
+          </a>
+
+          <a href="https://play.google.com/store/apps/details?id=com.absensigurusmkbulugading.myapp" target="_blank" rel="noopener noreferrer" class="reveal p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-emerald-500/50 hover:-translate-y-1 block transition-all group">
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="font-display font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors">Absensi Guru SMK Bulugading</h4>
+              <span class="text-[10px] bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/25 px-2.5 py-0.5 rounded-full font-semibold">Play Store</span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-2">Aplikasi presensi kehadiran guru berbasis mobile Android terintegrasi.</p>
+            <code class="text-[11px] text-slate-500">com.absensigurusmkbulugading.myapp</code>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TENTANG, TARGET KLIEN & KOMPETENSI -->
+  <section id="tentang" class="py-20 border-y border-slate-200/80 dark:border-white/[0.05] bg-slate-100/60 dark:bg-white/[0.015]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-4 reveal">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider">
+            <i data-lucide="user-check" class="w-3.5 h-3.5"></i> Tentang &amp; Kredibilitas
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Mengenal Munif Abdul, S.Kom</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Berlatar belakang Sarjana Komputer (<strong class="text-slate-900 dark:text-slate-200">S.Kom</strong>) dengan pengalaman praktis di bidang pengembangan perangkat lunak multidisiplin serta pemeliharaan perangkat keras dan jaringan komputer.
+          </p>
+          <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] space-y-3">
+            <div class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="graduation-cap" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0"></i>
+              <span><strong>Pendidikan:</strong> Sarjana Ilmu Komputer (S.Kom)</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="award" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0"></i>
+              <span><strong>Fokus Karya:</strong> Web, Android Play Store, Game Edukasi &amp; POS</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="wrench" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
+              <span><strong>Keahlian Teknis:</strong> Teknisi Jaringan (MikroTik/LAN/Wi-Fi), Ponsel, Laptop &amp; Elektronik</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0"></i>
+              <span><strong>Komitmen:</strong> Komunikasi jelas, pendampingan teknis, dan harga transparan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 reveal">
+          <h3 class="text-xs font-bold text-slate-500 dark:text-slate-300 uppercase tracking-wider mb-4">Siapa yang Biasa Kami Bantu?</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/40 transition-colors">
+              <div class="flex items-center gap-2.5 mb-2">
+                <i data-lucide="school" class="w-5 h-5 text-cyan-600 dark:text-cyan-400"></i>
+                <h4 class="font-display font-bold text-slate-900 dark:text-white text-sm">Sekolah, Madrasah &amp; Pesantren</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Website profil resmi, sistem absensi online, e-learning/CBT, hingga aplikasi Android lembaga.</p>
+            </div>
+
+            <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/40 transition-colors">
+              <div class="flex items-center gap-2.5 mb-2">
+                <i data-lucide="store" class="w-5 h-5 text-cyan-600 dark:text-cyan-400"></i>
+                <h4 class="font-display font-bold text-slate-900 dark:text-white text-sm">UMKM &amp; Toko Retail</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Landing page promosi usaha, program kasir desktop (POS), dan database stok barang.</p>
+            </div>
+
+            <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-cyan-500/40 transition-colors">
+              <div class="flex items-center gap-2.5 mb-2">
+                <i data-lucide="book-open" class="w-5 h-5 text-cyan-600 dark:text-cyan-400"></i>
+                <h4 class="font-display font-bold text-slate-900 dark:text-white text-sm">Pelajar &amp; Mahasiswa</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Pembuatan game edukasi 2D interaktif untuk tugas akhir, media ajar multimedia, dan konsultasi proyek IT.</p>
+            </div>
+
+            <div class="p-5 rounded-3xl glass-card border border-slate-200/80 dark:border-white/[0.08] hover:border-emerald-500/40 transition-colors">
+              <div class="flex items-center gap-2.5 mb-2">
+                <i data-lucide="users" class="w-5 h-5 text-emerald-600 dark:text-emerald-400"></i>
+                <h4 class="font-display font-bold text-slate-900 dark:text-white text-sm">Masyarakat Umum (Jember)</h4>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Jasa servis smartphone/laptop serta instalasi dan konfigurasi jaringan Wi-Fi/MikroTik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7B. CURRICULUM VITAE (CV) RESMI -->
+  <section id="cv" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 reveal">
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-3">
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Curriculum Vitae
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Daftar Riwayat Hidup (CV)</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Ringkasan data pribadi, riwayat pendidikan, pelatihan, sertifikasi, dan keahlian resmi.</p>
+        </div>
+        <button type="button" onclick="window.print()" class="self-start sm:self-auto inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-slate-900 dark:bg-white/[0.06] hover:bg-cyan-600 dark:hover:bg-cyan-500 text-white dark:hover:text-slate-950 border border-slate-800 dark:border-white/10 text-xs font-semibold transition-all">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          Cetak / Simpan PDF CV
+        </button>
+      </div>
+
+      <div class="reveal rounded-[2rem] overflow-hidden border border-slate-200/80 dark:border-white/10 shadow-2xl grid grid-cols-1 lg:grid-cols-12">
+        <!-- Kolom Kiri CV (Sidebar Gelap Modern) -->
+        <aside class="lg:col-span-4 bg-gradient-to-b from-[#0b2239] via-[#091d34] to-[#083344] text-slate-100 p-6 sm:p-8 space-y-7">
+          <div class="text-center">
+            <div class="w-28 h-28 mx-auto rounded-full p-[3px] bg-gradient-to-tr from-cyan-400 to-emerald-400 mb-4 shadow-lg">
+              <img src="foto-profil.jpg" alt="Munif Abdul" class="w-full h-full rounded-full object-cover object-top bg-slate-900">
+            </div>
+            <h3 class="font-display text-xl font-extrabold tracking-wide text-white">MUNIF <span class="text-amber-300">ABDUL</span></h3>
+            <p class="text-[11px] font-semibold text-cyan-200 tracking-wider uppercase mt-1 leading-relaxed">
+              IT SPECIALIST | ELECTRONIC TECHNICIAN | WEB &amp; ANDROID DEVELOPER
+            </p>
+          </div>
+
+          <!-- DATA PRIBADI -->
+          <div class="space-y-3 border-t border-white/15 pt-5">
+            <h4 class="font-display text-xs font-bold tracking-widest uppercase text-amber-300">Data Pribadi</h4>
+            <ul class="text-xs space-y-2.5 text-slate-200">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="calendar" class="w-4 h-4 text-amber-300 shrink-0 mt-0.5"></i>
+                <div><span class="block text-[10px] text-slate-400">Tanggal Lahir</span>1 Mei 1998</div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-amber-300 shrink-0 mt-0.5"></i>
+                <div><span class="block text-[10px] text-slate-400">Alamat</span>Bangsalsari, Jember, Jawa Timur</div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="mail" class="w-4 h-4 text-amber-300 shrink-0 mt-0.5"></i>
+                <div><span class="block text-[10px] text-slate-400">Email</span>munifabdul606@gmail.com</div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="phone" class="w-4 h-4 text-amber-300 shrink-0 mt-0.5"></i>
+                <div><span class="block text-[10px] text-slate-400">No. HP</span>+62 853-3565-0431</div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="globe" class="w-4 h-4 text-amber-300 shrink-0 mt-0.5"></i>
+                <div><span class="block text-[10px] text-slate-400">Website Portfolio</span><a href="https://mcode0105.github.io" target="_blank" rel="noopener noreferrer" class="text-cyan-300 hover:underline">https://mcode0105.github.io</a></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PENDIDIKAN -->
+          <div class="space-y-3 border-t border-white/15 pt-5">
+            <h4 class="font-display text-xs font-bold tracking-widest uppercase text-amber-300">Pendidikan</h4>
+            <ul class="text-xs space-y-2.5 text-slate-200">
+              <li class="flex gap-3">
+                <span class="font-bold text-cyan-300 w-8 shrink-0">S1</span>
+                <span>Universitas Nurul Jadid<br><span class="text-[11px] text-slate-300">(Teknik Informatika)</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="font-bold text-cyan-300 w-8 shrink-0">SMK</span>
+                <span>SMK Bustanul Ulum Bulugading<br><span class="text-[11px] text-slate-300">(Teknik Komputer dan Jaringan)</span></span>
+              </li>
+              <li class="flex gap-3">
+                <span class="font-bold text-cyan-300 w-8 shrink-0">MTs</span>
+                <span>MTs Bustanul Ulum Bulugading</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="font-bold text-cyan-300 w-8 shrink-0">SD</span>
+                <span>SDN Tisnogambar 01</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PELATIHAN & SERTIFIKASI -->
+          <div class="space-y-3 border-t border-white/15 pt-5">
+            <h4 class="font-display text-xs font-bold tracking-widest uppercase text-amber-300">Pelatihan &amp; Sertifikasi</h4>
+            <ul class="text-xs space-y-2 text-slate-200 list-disc list-inside">
+              <li>Lembaga Sertifikasi Profesi Pemrograman</li>
+              <li>Pelatihan MikroTik</li>
+              <li>Pemrograman Python &ndash; Dicoding <span class="text-[11px] text-cyan-300 font-mono">(JMZVM0KMJZN9)</span></li>
+              <li>Dasar Visualisasi Data &ndash; Dicoding <span class="text-[11px] text-cyan-300 font-mono">(N9ZODL0RRPG5)</span></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Kolom Kanan CV -->
+        <div class="lg:col-span-8 glass-card p-6 sm:p-8 space-y-7">
+          <!-- PROFIL SINGKAT -->
+          <div>
+            <h4 class="font-display text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-cyan-300 border-b border-slate-200 dark:border-white/10 pb-2 mb-3">Profil Singkat</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              Saya merupakan individu yang memiliki ketertarikan dan kemampuan di bidang teknologi informasi, elektronika, serta pengembangan perangkat lunak. Memiliki kemampuan dalam perbaikan perangkat elektronik seperti smartphone, laptop, dan perangkat elektronik lainnya. Selain itu, saya memiliki keahlian dalam instalasi dan konfigurasi jaringan komputer, pengembangan website, serta pengembangan aplikasi Android untuk mendukung kebutuhan administrasi, pendidikan, dan pelayanan digital.
+            </p>
+          </div>
+
+          <!-- BIDANG KEAHLIAN -->
+          <div>
+            <h4 class="font-display text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-cyan-300 border-b border-slate-200 dark:border-white/10 pb-2 mb-4">Bidang Keahlian</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07]">
+                <h5 class="font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white mb-1">1. Teknisi Elektronik</h5>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Perbaikan smartphone, HP, laptop/komputer, troubleshooting, dan pemeliharaan perangkat.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07]">
+                <h5 class="font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white mb-1">2. Network Technician</h5>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Instalasi &amp; konfigurasi jaringan, MikroTik, troubleshooting LAN &amp; Wi-Fi.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07]">
+                <h5 class="font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white mb-1">3. Web Developer</h5>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Website company profile, sekolah, sistem informasi, absensi berbasis web, dan e-learning.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07]">
+                <h5 class="font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white mb-1">4. Android Developer</h5>
+                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Pengembangan aplikasi Android, integrasi API, publikasi Google Play Store.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PORTOFOLIO RINGKAS CV -->
+          <div>
+            <h4 class="font-display text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-cyan-300 border-b border-slate-200 dark:border-white/10 pb-2 mb-4">Portofolio</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07]">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-300 mb-2">Website</h5>
+                <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                  <li>Bulugading (bulugading.com)</li>
+                  <li>SMK Full Day Bustanul Ulum (smkfulldaybu.com)</li>
+                  <li>Sistem Absensi (absensi.smkfulldaybu.com)</li>
+                  <li>E-Learning (elearning.smkfulldaybu.com)</li>
+                  <li>SIK &ndash; Sistem Informasi (sik.smkfulldaybu.com)</li>
+                </ul>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/[0.07]">
+                <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 mb-2">Aplikasi Android</h5>
+                <ul class="text-xs text-slate-700 dark:text-slate-300 space-y-1.5 list-disc list-inside">
+                  <li>Bulugading Smart (Play Store)</li>
+                  <li>Absensi Guru SMK Bulugading (Play Store)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- KUTIPAN MOTIVASI -->
+          <div class="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/25">
+            <h4 class="font-display text-xs font-extrabold uppercase tracking-wider text-amber-800 dark:text-amber-300 mb-1">Kutipan Motivasi</h4>
+            <p class="text-xs sm:text-sm italic text-slate-800 dark:text-slate-200">
+              &ldquo;Menghadirkan solusi melalui teknologi, kreativitas, dan inovasi.&rdquo;
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7C. ALUR KERJA & FAQ INTERAKTIF -->
+  <section id="faq" class="py-20 border-y border-slate-200/80 dark:border-white/[0.05] bg-slate-100/60 dark:bg-white/[0.015]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <!-- 4 Langkah Alur Kerja -->
+      <div>
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider mb-3">
+            <i data-lucide="workflow" class="w-3.5 h-3.5"></i> Cara Order &amp; Pengerjaan
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">4 Langkah Mudah Mulai Proyek</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-5 rounded-3xl">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-cyan-500/15 text-cyan-700 dark:text-cyan-300 font-display font-bold text-xs mb-3">01</span>
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white mb-1">Konsultasi Gratis</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Diskusikan kebutuhan aplikasi, website, servis perangkat, atau jaringan via WhatsApp.</p>
+          </div>
+          <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-5 rounded-3xl">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-blue-500/15 text-blue-700 dark:text-blue-300 font-display font-bold text-xs mb-3">02</span>
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white mb-1">Estimasi &amp; Kesepakatan</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Penentuan fitur, estimasi waktu, serta penyesuaian harga sesuai anggaran Anda.</p>
+          </div>
+          <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-5 rounded-3xl">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 font-display font-bold text-xs mb-3">03</span>
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white mb-1">Pengerjaan &amp; Update</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Proses pengembangan atau perbaikan disertai update progres berkala yang transparan.</p>
+          </div>
+          <div class="reveal glass-card border border-slate-200/80 dark:border-white/[0.08] p-5 rounded-3xl">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 font-display font-bold text-xs mb-3">04</span>
+            <h3 class="font-display font-bold text-sm text-slate-900 dark:text-white mb-1">Serah Terima &amp; Garansi</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">Uji coba bersama, panduan penggunaan lengkap, serta dukungan teknis &amp; garansi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Interaktif -->
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-8 reveal">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-3">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Tanya Jawab (FAQ)
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <div class="space-y-3 reveal" id="faq-accordion">
+          <div class="glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-2xl overflow-hidden">
+            <button type="button" class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white" aria-expanded="false">
+              <span>Berapa lama waktu pengerjaan website atau aplikasi?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Landing page sederhana umumnya selesai dalam 2&ndash;5 hari kerja. Untuk sistem informasi sekolah, aplikasi Android custom, atau game edukasi berkisar antara 1&ndash;4 minggu tergantung kompleksitas fitur.
+            </div>
+          </div>
+
+          <div class="glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-2xl overflow-hidden">
+            <button type="button" class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white" aria-expanded="false">
+              <span>Apakah harga masih bisa dinegosiasikan sesuai anggaran?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Ya, sangat bisa. Seluruh paket harga bersifat fleksibel dan dapat dimusyawarahkan dengan menyesuaikan ruang lingkup fitur agar cocok dengan anggaran UMKM, sekolah, maupun mahasiswa.
+            </div>
+          </div>
+
+          <div class="glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-2xl overflow-hidden">
+            <button type="button" class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white" aria-expanded="false">
+              <span>Apakah melayani proyek dari luar kota Jember?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Untuk pembuatan Website, Aplikasi Android, Game Edukasi, dan Software Desktop kami melayani secara online ke seluruh Indonesia. Sedangkan servis HP/laptop dan instalasi jaringan fisik melayani area Bangsalsari, Jember, dan sekitarnya.
+            </div>
+          </div>
+
+          <div class="glass-card border border-slate-200/80 dark:border-white/[0.08] rounded-2xl overflow-hidden">
+            <button type="button" class="faq-toggle w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-display font-bold text-xs sm:text-sm text-slate-900 dark:text-white" aria-expanded="false">
+              <span>Apakah ada garansi atau bantuan setelah proyek selesai?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-600 dark:text-cyan-400 shrink-0 transition-transform duration-200"></i>
+            </button>
+            <div class="faq-content hidden px-5 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Tentu. Setiap proyek software dilengkapi garansi perbaikan bug dan panduan penggunaan. Untuk servis perangkat keras dan konfigurasi MikroTik juga diberikan garansi sesuai jenis penanganan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. BANNER CTA, KONSULTASI DINAMIS WA & FOOTER -->
+  <section id="kontak" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal relative rounded-[2rem] p-[1px] bg-gradient-to-br from-cyan-500/40 via-slate-300 dark:via-white/10 to-emerald-500/40 mb-16 shadow-2xl">
+        <div class="rounded-[31px] bg-white/95 dark:bg-[#070d1b]/95 backdrop-blur-xl p-6 sm:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 space-y-4">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wider">Konsultasi Gratis</span>
+              <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Siap Wujudkan Proyek Digital atau Perbaikan Perangkat Anda?</h2>
+              <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Pilih jenis layanan di samping dan isi detail singkatnya. Pesan WhatsApp akan otomatis disiapkan agar konsultasi lebih cepat dan tepat sasaran.
+              </p>
+              <div class="flex flex-wrap gap-2.5 pt-2 text-xs text-slate-700 dark:text-slate-300">
+                <a href="mailto:munifabdul606@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-cyan-500/50 transition-colors">
+                  <i data-lucide="mail" class="w-4 h-4 text-cyan-600 dark:text-cyan-400"></i>
+                  munifabdul606@gmail.com
+                </a>
+                <button type="button" data-copy="munifabdul606@gmail.com" class="copy-btn inline-flex items-center gap-1.5 px-3 py-2.5 rounded-2xl bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-cyan-500/50 text-slate-600 dark:text-slate-300 transition-colors" title="Salin Email">
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  <span>Salin</span>
+                </button>
+                <a href="https://wa.me/6285335650431" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 transition-colors">
+                  <i data-lucide="phone" class="w-4 h-4 text-emerald-600 dark:text-emerald-400"></i>
+                  +62 853-3565-0431
+                </a>
+                <button type="button" data-copy="+62 853-3565-0431" class="copy-btn inline-flex items-center gap-1.5 px-3 py-2.5 rounded-2xl bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 hover:border-emerald-500/50 text-slate-600 dark:text-slate-300 transition-colors" title="Salin Nomor WA">
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                  <span>Salin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dynamic Query URL Generator untuk WA -->
+            <form id="wa-generator-form" class="lg:col-span-6 bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-3xl p-5 sm:p-6 space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label for="wa-name" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Nama Anda / Instansi</label>
+                  <input id="wa-name" type="text" placeholder="Contoh: Budi / Toko Berkah"
+                         class="w-full px-3.5 py-2.5 rounded-2xl bg-white dark:bg-slate-950/80 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+                </div>
+                <div>
+                  <label for="wa-service" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Layanan yang Dibutuhkan</label>
+                  <select id="wa-service"
+                          class="w-full px-3.5 py-2.5 rounded-2xl bg-white dark:bg-slate-950/80 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-cyan-500">
+                    <option value="Web Developer">Web Developer (Mulai 500 Rb)</option>
+                    <option value="Android Developer">Android Developer (Mulai 1 Jt)</option>
+                    <option value="Game Edukasi / Developer">Game Edukasi (Mulai 750 Rb)</option>
+                    <option value="Desktop POS Developer">Desktop POS Kasir (Mulai 800 Rb)</option>
+                    <option value="Teknisi Ponsel / Laptop / Elektronik">Teknisi Ponsel, Laptop &amp; Elektronik</option>
+                    <option value="Teknisi Jaringan (LAN / Wi-Fi / MikroTik)">Teknisi Jaringan (LAN / Wi-Fi / MikroTik)</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="wa-note" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Kebutuhan / Catatan Singkat</label>
+                <textarea id="wa-note" rows="2" placeholder="Ceritakan singkat kebutuhan atau estimasi anggaran Anda..."
+                          class="w-full px-3.5 py-2.5 rounded-2xl bg-white dark:bg-slate-950/80 border border-slate-200 dark:border-white/10 text-xs text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-cyan-500"></textarea>
+              </div>
+              <button type="submit"
+                      class="w-full py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 text-xs sm:text-sm font-bold shadow-lg shadow-cyan-500/20 inline-flex items-center justify-center gap-2 transition-all hover:scale-[1.01]">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                Kirim Konsultasi via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="border-t border-slate-200 dark:border-white/[0.07] pt-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white text-base mb-3">Munif Abdul, S.Kom</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Menghadirkan solusi teknologi informasi, pengembangan perangkat lunak (Web, Android, Game, Desktop), serta layanan perbaikan perangkat keras dan jaringan berkualitas.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white text-base mb-3">Kontak &amp; Lokasi</h4>
+            <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2">
+              <li>WhatsApp: <a href="https://wa.me/6285335650431" target="_blank" rel="noopener noreferrer" class="text-slate-800 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400">+62 853-3565-0431</a></li>
+              <li>Email: <a href="mailto:munifabdul606@gmail.com" class="text-slate-800 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400">munifabdul606@gmail.com</a></li>
+              <li>Alamat: Bangsalsari, Jember, Jawa Timur (Menerima proyek online seluruh Indonesia)</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-slate-900 dark:text-white text-base mb-3">Portofolio Online Tambahan</h4>
+            <a href="https://mcode0105.github.io" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-cyan-600 dark:text-cyan-400 hover:underline">
+              https://mcode0105.github.io
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+        <div class="border-t border-slate-200 dark:border-white/[0.06] pt-6 text-center text-xs text-slate-500">
+          &copy; 2026 Munif Abdul, S.Kom. Hak Cipta Dilindungi.
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="copy-toast" role="status" aria-live="polite" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-950 text-xs font-semibold shadow-xl opacity-0 pointer-events-none transition-all duration-300">
+    Berhasil disalin ke clipboard!
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+          type="button"
+          aria-label="Kembali ke atas"
+          class="fixed bottom-20 right-5 z-40 w-11 h-11 rounded-full bg-white/90 dark:bg-slate-900/90 border border-slate-200 dark:border-white/15 text-slate-700 dark:text-cyan-300 shadow-lg backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none translate-y-2 transition-all duration-300 hover:scale-110">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6285335650431?text=Halo%20Munif%20Abdul,%20S.Kom,%20saya%20ingin%20konsultasi%20layanan%20IT."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat WhatsApp Munif Abdul"
+     class="fixed bottom-5 right-5 z-40 w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-cyan-500 text-slate-950 shadow-xl shadow-emerald-500/30 flex items-center justify-center transition-transform hover:scale-110">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+  </a>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Dark & Light Mode Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try {
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        } catch (e) {}
+      });
+    }
+
+    // Subtle rotating role text in hero badge
+    const roles = ['Web & Android Dev', 'Teknisi Ponsel & Laptop', 'Teknisi Jaringan & MikroTik', 'Game Edukasi & POS'];
+    const typingEl = document.getElementById('typing-role');
+    let roleIndex = 0;
+    if (typingEl) {
+      setInterval(() => {
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingEl.style.opacity = '0';
+        setTimeout(() => {
+          typingEl.textContent = roles[roleIndex];
+          typingEl.style.opacity = '1';
+        }, 200);
+      }, 2800);
+      typingEl.style.transition = 'opacity 0.2s ease';
+    }
+
+    // Scroll reveal animation with automatic grid stagger
+    const revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach((el) => {
+      const parent = el.parentElement;
+      if (parent && parent.classList.contains('grid')) {
+        const siblings = Array.from(parent.children).filter((c) => c.classList.contains('reveal'));
+        const idx = siblings.indexOf(el);
+        if (idx > 0) {
+          el.style.transitionDelay = `${Math.min(idx * 80, 320)}ms`;
+        }
+      }
+    });
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      revealEls.forEach((el) => observer.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add('is-visible'));
+    }
+
+    // Smooth Parallax + Top Scroll Progress Bar (60fps rAF)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const scrollProgressBar = document.getElementById('scroll-progress');
+    const backToTopBtn = document.getElementById('back-to-top');
+    const parallaxEls = document.querySelectorAll('[data-parallax]');
+    let latestScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateOnScroll() {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollProgressBar && docHeight > 0) {
+        const progress = Math.min(100, Math.max(0, (latestScrollY / docHeight) * 100));
+        scrollProgressBar.style.width = `${progress}%`;
+      }
+
+      if (backToTopBtn) {
+        if (latestScrollY > 420) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+        }
+      }
+
+      if (!prefersReducedMotion) {
+        parallaxEls.forEach((el) => {
+          const speed = parseFloat(el.getAttribute('data-parallax')) || 0;
+          const offset = latestScrollY * speed;
+          el.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+        });
+      }
+      ticking = false;
+    }
+
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('svg, i');
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        if (content) content.classList.toggle('hidden');
+        if (icon) icon.classList.toggle('rotate-180');
+      });
+    });
+
+    // Copy Contact Buttons + Toast
+    const copyToast = document.getElementById('copy-toast');
+    let toastTimer;
+    document.querySelectorAll('.copy-btn').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const text = btn.getAttribute('data-copy');
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch (e) {
+          const temp = document.createElement('input');
+          temp.value = text;
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand('copy');
+          document.body.removeChild(temp);
+        }
+        if (copyToast) {
+          copyToast.textContent = `Disalin: ${text}`;
+          copyToast.classList.remove('opacity-0');
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(() => {
+            copyToast.classList.add('opacity-0');
+          }, 2200);
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      latestScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(updateOnScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateOnScroll();
+
+    // Interactive Cursor Spotlight on Glass Cards
+    document.querySelectorAll('.glass-card').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
+    });
+
+    // Subtle 3D Tilt on Hero Profile Card (Desktop)
+    const tiltCard = document.getElementById('hero-tilt-card');
+    if (tiltCard && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+      tiltCard.addEventListener('mousemove', (e) => {
+        const rect = tiltCard.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        tiltCard.style.transform = `perspective(1000px) rotateX(${(-y * 8).toFixed(2)}deg) rotateY(${(x * 8).toFixed(2)}deg) scale3d(1.01, 1.01, 1.01)`;
+      });
+      tiltCard.addEventListener('mouseleave', () => {
+        tiltCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    }
+
+    // Mobile navigation toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+      });
+
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Portfolio category filter (supports Light & Dark Mode)
+    const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioGroups = document.querySelectorAll('.portfolio-group');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterButtons.forEach((b) => {
+          b.className = 'portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-white/[0.04] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:border-cyan-500/40 transition-all';
+        });
+        btn.className = 'portfolio-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 shadow-md shadow-cyan-500/20 transition-all';
+
+        portfolioGroups.forEach((group) => {
+          const category = group.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            group.classList.remove('hidden');
+          } else {
+            group.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Auto-select service in WA form when clicking service card CTA
+    const serviceSelect = document.getElementById('wa-service');
+    document.querySelectorAll('.service-cta').forEach((link) => {
+      link.addEventListener('click', () => {
+        const selected = link.getAttribute('data-service');
+        if (serviceSelect && selected) {
+          serviceSelect.value = selected;
+        }
+      });
+    });
+
+    // Dynamic WhatsApp URL generator
+    const waForm = document.getElementById('wa-generator-form');
+    if (waForm) {
+      waForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('wa-name').value.trim();
+        const service = document.getElementById('wa-service').value;
+        const note = document.getElementById('wa-note').value.trim();
+
+        let message = `Halo Munif Abdul, S.Kom, saya ingin konsultasi layanan *${service}*.`;
+        if (name) {
+          message += `\nNama/Instansi: ${name}`;
+        }
+        if (note) {
+          message += `\nKebutuhan: ${note}`;
+        }
+
+        const waUrl = `https://wa.me/6285335650431?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+      });
+    }
+
+    // Active Navbar Scroll-Spy
+    const navPills = document.querySelectorAll('.nav-pill');
+    const spySections = ['layanan', 'harga', 'portofolio', 'tentang', 'cv', 'kontak']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if ('IntersectionObserver' in window && spySections.length) {
+      const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const activeId = entry.target.id;
+            navPills.forEach((pill) => {
+              const isMatch = pill.getAttribute('data-nav') === activeId;
+              pill.classList.toggle('bg-white', isMatch);
+              pill.classList.toggle('dark:bg-white/10', isMatch);
+              pill.classList.toggle('text-cyan-600', isMatch);
+              pill.classList.toggle('dark:text-cyan-300', isMatch);
+              pill.classList.toggle('shadow-sm', isMatch);
+            });
+          }
+        });
+      }, { rootMargin: '-35% 0px -55% 0px' });
+      spySections.forEach((sec) => spyObserver.observe(sec));
+    }
+  </script>
 </body>
-
 </html>
